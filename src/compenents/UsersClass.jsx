@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Col} from "react-bootstrap";
 
 class UsersClass extends Component {
     constructor(props){
@@ -22,19 +23,26 @@ class UsersClass extends Component {
 
     render() {
         return (
+      
+        
             <div style={{paddingLeft: "3rem", textAlign: "left", paddingRight: "3rem", backgroundColor: "ghostwhite"}}>
-                <h1 style={{textAlign: "left", color: "blue", marginTop: "0px"}}>React Lifecycle Api</h1>
+                <h3  style={{textAlign: "left", color: "blue", paddingTop: "2rem"}}>React Lifecycle Api Class</h3>
+            <Col md={6}>
+                
                 {this.state.users.map((item,index) =>{
                     return(
                         <div key={index}>
+                            
                             <p>Name: {item.name}</p>
                             <p>Username: {item.username}</p>
                             <p>Email: {item.email}</p>
-                            <hr style={{border: "1px solid blue", marginRight: "85%"}} />   
+                            <hr />   
                         </div>
                     );
                 })}
+            </Col>
             </div>
+        
         );
     }
 }
